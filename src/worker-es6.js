@@ -152,13 +152,6 @@ const deezer = () => {
 };
 
 const plex = () => {
-  // const song = document.querySelector(
-  //   '[class*="PlayerControlsMetadata-container-"] > a:nth-child(1)'
-  // );
-  // const artist = document.querySelector(
-  //   'span[class*="MetadataPosterTitle-singleLineTitle-"] > a:nth-child(1)'
-  // );
-
   const song = window.document.title.split();
 
   if (song.startsWith('▶')) {
