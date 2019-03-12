@@ -152,21 +152,20 @@ const deezer = () => {
 };
 
 const plex = () => {
-  const song = window.document.title.slice();
-
+  let song = window.document.title.slice();
   if (song.startsWith('▶')) {
-    song.splice(0, 2);
+    song = song.slice(2, song.length);
   }
 
-  if (typeof song === 'undefined' || song === null || song.textContent === '') {
+  if (typeof song === 'undefined' || song === null) {
     return {
-      song,
+      song: 'Paused',
       webPlayer: 'Plex'
     };
   }
 
   return {
-    song: `${artist.textContent} - ${song.textContent}`,
+    song,
     wepPlayer: 'Plex'
   };
 };
