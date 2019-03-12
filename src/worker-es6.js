@@ -152,7 +152,7 @@ const deezer = () => {
 };
 
 const plex = () => {
-  const song = window.document.title[0].split();
+  const song = window.document.title.slice();
 
   if (song.startsWith('▶')) {
     song.splice(0, 2);
