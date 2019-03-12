@@ -144,8 +144,8 @@ const youtube = () => {
 };
 
 const deezer = () => {
-  const song = document.querySelector('.player-track-title');
-  const artist = document.querySelector('.player-track-artist');
+  const song = document.querySelector('a.track-link:nth-child(1)');
+  const artist = document.querySelector('a.track-link:nth-child(2)');
 
   if (typeof song === 'undefined' || song === null || song.textContent === '') {
     return {
@@ -155,7 +155,7 @@ const deezer = () => {
   }
 
   return {
-    song: `${artist.textContent.substr(3)} - ${song.textContent}`,
+    song: `${artist.textContent} - ${song.textContent}`,
     wepPlayer: 'Deezer'
   };
 };
