@@ -1,21 +1,14 @@
 'use strict';
 
 const mixcloud = () => {
-  const song = document.querySelector(
-    'a[ng-bind="player.currentCloudcast.title"]'
-  );
-  const artist = document.querySelector(
-    'a[ng-bind="player.currentCloudcast.owner"]'
-  );
-
-  let songTitle = `${artist.textContent} - ${song.textContent}`;
+  const song = document.querySelector('.player-cloudcast-title');
 
   if (typeof song === 'undefined' || song === null || song.textContent === '') {
     songTitle = 'Paused';
   }
 
   return {
-    song: songTitle,
+    song,
     wepPlayer: 'Mixcloud'
   };
 };
