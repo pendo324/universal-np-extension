@@ -109,9 +109,7 @@ const soundcloud = () => {
 
 // Can't grab artist from tunein, it is placed together
 const tunein = () => {
-  const song = document.querySelector(
-    '#tuner > div > div > div.display > div.line1._navigateNowPlaying'
-  );
+  const song = document.querySelector('#playerTitle');
 
   if (typeof song === 'undefined' || song === null || song.textContent === '') {
     return {
