@@ -170,16 +170,34 @@ const plex = () => {
   };
 };
 
+const hypem = () => {
+  const song = document.querySelector('#player-nowplaying > a:nth-child(3)');
+  const artist = document.querySelector('#player-nowplaying > a:nth-child(1)');
+
+  if (typeof song === 'undefined' || song === null || song.textContent === '') {
+    return {
+      song: 'Paused',
+      webPlayer: 'hypem'
+    };
+  }
+
+  return {
+    song: `${artist.textContent} - ${song.textContent}`,
+    wepPlayer: 'hypem'
+  };
+};
+
 const players = {
-  mixcloud: mixcloud,
-  pandora: pandora,
+  mixcloud,
+  pandora,
   'play.google.com': play,
   'open.spotify.com': spotify,
-  soundcloud: soundcloud,
-  tunein: tunein,
-  youtube: youtube,
-  deezer: deezer,
-  'app.plex.tv': plex
+  soundcloud,
+  tunein,
+  youtube,
+  deezer,
+  'app.plex.tv': plex,
+  hypem
 };
 
 const sendToBackground = ({ song, webPlayer, isPaused }) => {
