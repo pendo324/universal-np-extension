@@ -161,16 +161,22 @@ const deezer = () => {
 };
 
 const plex = () => {
-  const song = document.querySelector(
-    '[class*="PlayerControlsMetadata-container-"] > a:nth-child(1)'
-  );
-  const artist = document.querySelector(
-    'span[class*="MetadataPosterTitle-singleLineTitle-"] > a:nth-child(1)'
-  );
+  // const song = document.querySelector(
+  //   '[class*="PlayerControlsMetadata-container-"] > a:nth-child(1)'
+  // );
+  // const artist = document.querySelector(
+  //   'span[class*="MetadataPosterTitle-singleLineTitle-"] > a:nth-child(1)'
+  // );
+
+  const song = window.document.title.split();
+
+  if (song.startsWith('▶')) {
+    song.splice(0, 2);
+  }
 
   if (typeof song === 'undefined' || song === null || song.textContent === '') {
     return {
-      song: 'Paused',
+      song,
       webPlayer: 'Plex'
     };
   }
