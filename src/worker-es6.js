@@ -31,7 +31,7 @@ const pandora = () => {
     };
   }
 
-  const song = docuemnt.querySelector('.nowPlayingTopInfo__current__trackName');
+  const song = docuemnt.querySelector('.Marquee__wrapper__content');
   const artist = document.querySelector(
     '.nowPlayingTopInfo__current__artistName'
   );
