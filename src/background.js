@@ -24,7 +24,7 @@
 //     port.postMessage(message);
 // }
 
-if (process.env.BROWSER === 'chrome') {
+if (process.env.BROWSER === 'chrome' || process.env.BROWSER === 'edgium' || process.env.BROWSER === 'edge') {
   chrome.runtime.onMessage.addListener(async function(
     data,
     sender,
