@@ -1,9 +1,9 @@
 {
   "manifest_version": 2,
 
-  "name": "Now Playing Companion",
-  "description": "Browser helper for the desktop application, Essential Now Playing",
-  "version": "2.0.0",
+  "name": "Universal Now Playing Companion",
+  "description": "Browser helper for the desktop application, Universal Now Playing",
+  "version": "1.0.0",
 
   "browser_specific_settings": {
     "gecko": {
@@ -17,9 +17,8 @@
   },
 
   "permissions": [
-    "nativeMessaging",
     "webRequest",
-    "tabs",
+    "activeTab",
     "<all_urls>"
   ],
   
