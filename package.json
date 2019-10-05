@@ -13,6 +13,7 @@
   },
   "scripts": {
     "build:firefox": "webpack --config webpack.config.firefox.js",
-    "build:chrome": "webpack --config webpack.config.chrome.js"
+    "build:chrome": "webpack --config webpack.config.chrome.js",
+    "build:edge": "webpack --config webpack.config.edge.js"
   }
 }

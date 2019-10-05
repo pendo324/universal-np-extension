@@ -1,0 +1,31 @@
+{
+  "author": "pendo324",
+  "background": {
+    "page": "background.html",
+    "persistent": true
+  },
+  "browser_action": {
+    "default_icon": {
+      "48": "icon.png"
+    },
+    "default_popup": "popup.html"
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "obsnp@flyinglawnmower.com",
+      "strict_min_version": "42.0"
+    }
+  },
+  "description": "Browser helper for the desktop application, Universal Now Playing",
+  "icons": {
+    "48": "icon.png"
+  },
+  "manifest_version": 2,
+  "name": "Universal Now Playing Companion",
+  "permissions": ["webRequest", "activeTab", "<all_urls>"],
+  "version": "1.0.0",
+  "-ms-preload": {
+    "backgroundScript": "backgroundScriptsAPIBridge.js",
+    "contentScript": "contentScriptsAPIBridge.js"
+  }
+}
