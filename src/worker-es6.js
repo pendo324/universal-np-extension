@@ -183,7 +183,7 @@ const hypem = () => {
 
   return {
     song: `${artist.textContent} - ${song.textContent}`,
-    wepPlayer: 'hypem'
+    webPlayer: 'hypem'
   };
 };
 
