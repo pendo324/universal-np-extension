@@ -303,7 +303,7 @@ const init = () => {
     npSupported.style.color = 'red';
 
     const notSupportedLink = document.createElement('a');
-    notSupportedLink.href = 'https://github.com/pendo324/OBS-Now-Playing';
+    notSupportedLink.href = 'https://github.com/pendo324/universal-np';
     notSupportedLink.textContent = 'is not supported.';
 
     npSupported.append(notSupportedLink);
