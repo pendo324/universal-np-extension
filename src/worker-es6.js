@@ -187,6 +187,25 @@ const hypem = () => {
   };
 };
 
+const bandcamp = () => {
+  const webPlayer = 'bandcamp';
+  const song = document.querySelector('[itemprop="byArtist"]');
+  const artist = document.querySelector('.title_link > .title');
+  const isPlaying = document.querySelector('.playbutton.playing');
+
+  if (isPlaying === null) {
+    return {
+      song: 'Paused',
+      webPlayer
+    };
+  }
+
+  return {
+    song: `${artist.textContent} - ${song.textContent.trim()}`,
+    webPlayer
+  };
+};
+
 const players = {
   mixcloud,
   pandora,
@@ -197,7 +216,8 @@ const players = {
   youtube,
   deezer,
   'app.plex.tv': plex,
-  hypem
+  hypem,
+  bandcamp
 };
 
 const sendToBackground = ({ song, webPlayer, isPaused }) => {
