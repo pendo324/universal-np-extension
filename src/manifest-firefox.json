@@ -19,7 +19,16 @@
   "permissions": [
     "webRequest",
     "activeTab",
-    "<all_urls>"
+    "*://*.mixcloud.com",
+    "*://*.pandora.com",
+    "*://*.play.google.com",
+    "*://*.open.spotify.com",
+    "*://*.soundcloud.com",
+    "*://*.tunein.com",
+    "*://*.youtube.com",
+    "*://*.deezer.com",
+    "*://*.app.plex.tv",
+    "*://*.hypem.com"
   ],
   
   "browser_action": {
