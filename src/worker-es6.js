@@ -83,19 +83,8 @@ const spotify = () => {
 };
 
 const soundcloud = () => {
-  const song = document.querySelector(
-    '.playbackSoundBadge__titleContextContainer > div > a > span:nth-child(2)'
-  );
-
-  if (typeof song === 'undefined' || song === null || song.textContent === '') {
-    return {
-      song: 'Paused',
-      webPlayer: 'Soundcloud'
-    };
-  }
-
   return {
-    song: song.textContent,
+    song: document.title === 'Discover on SoundCloud' ? 'Paused' : document.title,
     webPlayer: 'Soundcloud'
   };
 };
