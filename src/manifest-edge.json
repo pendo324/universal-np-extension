@@ -23,7 +23,7 @@
   "manifest_version": 2,
   "name": "Universal Now Playing Companion",
   "permissions": ["webRequest", "activeTab", "<all_urls>"],
-  "version": "1.0.0",
+  "version": "1.0.3",
   "-ms-preload": {
     "backgroundScript": "backgroundScriptsAPIBridge.js",
     "contentScript": "contentScriptsAPIBridge.js"
