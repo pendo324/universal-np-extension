@@ -195,6 +195,29 @@ const bandcamp = () => {
   };
 };
 
+const youtubeMusic = () => {
+  const webPlayer = 'youtubeMusic';
+  const title = document.querySelector(
+    'yt-formatted-string.title.style-scope.ytmusic-player-bar.complex-string'
+  ).title;
+  const byline = document.querySelector(
+    'yt-formatted-string.byline.style-scope.ytmusic-player-bar.complex-string'
+  ).title;
+  const isPlaying = document.querySelector('#play-pause-button');
+
+  if (isPlaying === null || isPlaying.title === 'Play') {
+    return {
+      song: 'Paused',
+      webPlayer
+    };
+  }
+
+  return {
+    song: `${title} - ${byline}`,
+    webPlayer
+  };
+};
+
 const players = {
   mixcloud,
   pandora,
@@ -202,6 +225,7 @@ const players = {
   'open.spotify.com': spotify,
   soundcloud,
   tunein,
+  'music.youtube.com': youtubeMusic,
   youtube,
   deezer,
   'app.plex.tv': plex,
@@ -227,7 +251,6 @@ const sendToBackground = ({ song, webPlayer, isPaused }) => {
 
 // sets the song variable, send it to localhost and makes the
 // appropriate changes to the html object(s)
-// TODO: add the html shit
 const setSong = playerHandler => {
   const track = playerHandler();
   const nowPlayingBody = document.querySelector('.NowPlayingBody');
@@ -245,7 +268,6 @@ const addHTML = () => {
   container.className = 'NowPlayingContainer';
   container.innerHTML =
     '<style>.NowPlayingContainer{all:unset;text-align:left;background-color:#343434;border:2px solid #3c3c3c;border-radius:4px;color:#f5f5f5;position:fixed;bottom:50px;right:30px;width:300px;min-height:100px;z-index:10000;}.NowPlayingHeader{margin:10px;line-height:18px;font-family:arial;font-size:16px}.NowPlayingBody{margin-top:15px;margin-bottom:10px;margin-left:10px;line-height:16px;font-family:arial;font-size:14px}.NowPlayingSupported{margin-left:70px;margin-top:-20px;line-height:16px;font-family:arial;font-size:14px}.NowPlayingSupported a:link{color:#09F}.NowPlayingSupported a:visited{color: #CC0099;}.NowPlayingButton{all:unset;background-color:#008CBA;margin-left:10px;line-height:16px;font-family:arial;font-size:14px;color:#FFFFFF;padding:5px 10px;border-radius:4px;cursor:pointer;}.NowPlayingButton:hover{background-color:#00BFED}</style><div class=NowPlayingHeader>Essential Now Playing</div><button class=NowPlayingButton>Start</button><div class=NowPlayingSupported></div><div class=NowPlayingBody>No song playing.</div>';
-  var html = '<div class=NowPlayingContainer></div>';
   document.querySelector('body').append(container);
 };
 
