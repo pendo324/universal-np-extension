@@ -3,7 +3,7 @@
 
   "name": "Universal Now Playing Companion",
   "description": "Browser helper for the desktop application, Universal Now Playing",
-  "version": "1.0.0",
+  "version": "1.0.3",
 
   "icons": {
     "48": "icon.png"
@@ -22,7 +22,8 @@
     "*://*.youtube.com",
     "*://*.deezer.com",
     "*://*.app.plex.tv",
-    "*://*.hypem.com"
+    "*://*.hypem.com",
+    "*://*.tidal.com"
   ],
 
   "browser_action": {

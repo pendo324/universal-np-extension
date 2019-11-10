@@ -218,6 +218,28 @@ const youtubeMusic = () => {
   };
 };
 
+const tidal = () => {
+  const webPlayer = 'tidal';
+  const title = document.querySelector("[data-test='footer-track-title']")
+    .innerText;
+  const artist = document.querySelector(
+    "[data-test='grid-item-detail-text-title-artist']"
+  ).innerText;
+  const isPlaying = document.querySelector("[data-test='pause']");
+
+  if (isPlaying === null) {
+    return {
+      song: 'Paused',
+      webPlayer
+    };
+  }
+
+  return {
+    song: `${title} - ${artist}`,
+    webPlayer
+  };
+};
+
 const players = {
   mixcloud,
   pandora,
@@ -230,7 +252,8 @@ const players = {
   deezer,
   'app.plex.tv': plex,
   hypem,
-  bandcamp
+  bandcamp,
+  'listen.tidal.com': tidal
 };
 
 const sendToBackground = ({ song, webPlayer, isPaused }) => {
