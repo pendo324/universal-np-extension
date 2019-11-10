@@ -196,7 +196,7 @@ const bandcamp = () => {
 };
 
 const youtubeMusic = () => {
-  const webPlayer = 'youtubeMusic';
+  const webPlayer = 'YouTube Music';
   const title = document.querySelector(
     'yt-formatted-string.title.style-scope.ytmusic-player-bar.complex-string'
   ).title;
@@ -219,7 +219,7 @@ const youtubeMusic = () => {
 };
 
 const tidal = () => {
-  const webPlayer = 'tidal';
+  const webPlayer = 'Tidal';
   const title = document.querySelector("[data-test='footer-track-title']")
     .innerText;
   const artist = document.querySelector(
