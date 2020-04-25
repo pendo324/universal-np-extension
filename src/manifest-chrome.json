@@ -10,20 +10,18 @@
   },
 
   "permissions": [
-    "webRequest",
-    "activeTab",
-    "tabs",
-    "*://*.mixcloud.com",
-    "*://*.pandora.com",
-    "*://*.play.google.com",
-    "*://*.open.spotify.com",
-    "*://*.soundcloud.com",
-    "*://*.tunein.com",
-    "*://*.youtube.com",
-    "*://*.deezer.com",
-    "*://*.app.plex.tv",
-    "*://*.hypem.com",
-    "*://*.tidal.com"
+    "http://localhost:47565/*",
+    "https://www.mixcloud.com/*",
+    "https://www.pandora.com/*",
+    "https://play.google.com/*",
+    "https://open.spotify.com/*",
+    "https://soundcloud.com/*",
+    "https://tunein.com/*",
+    "https://www.youtube.com/*",
+    "https://www.deezer.com/*",
+    "https://app.plex.tv/*",
+    "https://hypem.com/*",
+    "https://listen.tidal.com/*"
   ],
 
   "browser_action": {
