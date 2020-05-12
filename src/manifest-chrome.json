@@ -3,7 +3,7 @@
 
   "name": "Universal Now Playing Companion",
   "description": "Browser helper for the desktop application, Universal Now Playing",
-  "version": "1.0.3",
+  "version": "1.0.4",
 
   "icons": {
     "48": "icon.png"
