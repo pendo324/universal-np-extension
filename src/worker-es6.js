@@ -24,9 +24,9 @@ const pandora = () => {
     };
   }
 
-  const song = docuemnt.querySelector('.Marquee__wrapper__content');
+  const song = document.querySelector('.Tuner__Audio__TrackDetail__title');
   const artist = document.querySelector(
-    '.nowPlayingTopInfo__current__artistName'
+    '.Tuner__Audio__TrackDetail__artist'
   );
 
   songTitle = `${artist.textContent} - ${song.textContent}`;
