@@ -198,10 +198,10 @@ const bandcamp = () => {
 const youtubeMusic = () => {
   const webPlayer = 'YouTube Music';
   const title = document.querySelector(
-    'yt-formatted-string.title.style-scope.ytmusic-player-bar.complex-string'
+    'yt-formatted-string.title.style-scope.ytmusic-player-bar'
   ).title;
   const byline = document.querySelector(
-    'yt-formatted-string.byline.style-scope.ytmusic-player-bar.complex-string'
+    'yt-formatted-string.byline.style-scope.ytmusic-player-bar'
   ).title;
   const isPlaying = document.querySelector('#play-pause-button');
 
