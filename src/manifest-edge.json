@@ -1,5 +1,10 @@
 {
   "author": "pendo324",
+
+  "name": "Universal Now Playing Companion",
+  "description": "Browser helper for the desktop application, Universal Now Playing",
+  "version": "1.0.5",
+
   "background": {
     "page": "background.html",
     "persistent": true
@@ -16,14 +21,11 @@
       "strict_min_version": "42.0"
     }
   },
-  "description": "Browser helper for the desktop application, Universal Now Playing",
   "icons": {
     "48": "icon.png"
   },
   "manifest_version": 2,
-  "name": "Universal Now Playing Companion",
   "permissions": ["webRequest", "activeTab", "<all_urls>"],
-  "version": "1.0.4",
   "-ms-preload": {
     "backgroundScript": "backgroundScriptsAPIBridge.js",
     "contentScript": "contentScriptsAPIBridge.js"
